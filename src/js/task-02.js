@@ -14,7 +14,6 @@ const newArr = ingredients.map(element => {
   itemEl.textContent = element;
   itemEl.classList.add('item');
   return itemEl;
-  newArr.push(itemEl);
 })
 
   const listEl = document.querySelector('#ingredients');

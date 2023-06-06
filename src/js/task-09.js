@@ -9,7 +9,5 @@ const bttnEl = document.querySelector('.change-color');
 const spanEl = document.querySelector('.color');
 
 bttnEl.addEventListener("click", () => {
-  const color = getRandomHexColor();
-  bodyEl.style.backgroundColor = color;
-  spanEl.textContent = color;
+  bodyEl.style.backgroundColor = spanEl.textContent = getRandomHexColor();
 } );

@@ -13,33 +13,11 @@ const images = [
   },
 ];
 
+const listEl = document.querySelector('.gallery');
 
-const listEl = document.querySelector('.gallery')
+const gallery = images.map(({ url, alt }) => {
+return `<li class="gallery-list-item"><img class="gallery-list-image" src = '${url}', alt = '${alt}'></li>`
+}).join("");
 
-
-const newArr = images.map(element => {
-  const itemEl = document.createElement('li');
-  const imgEl = document.createElement('img');
-  imgEl.src = `${element.url}`;
-  imgEl.alt = `${element.alt}`;
-  imgEl.style.width = "400px";
-  imgEl.style.height = "300px";
-  itemEl.append(imgEl);
-  console.log(itemEl);
-  return itemEl;
-})
-
-newArr.forEach(element => {
-  listEl.insertAdjacentElement("beforeend", element)
-})
-
-
- 
-  
-  
-  
-  
-  
-  
-  
+listEl.insertAdjacentHTML("beforeend", gallery);
   
